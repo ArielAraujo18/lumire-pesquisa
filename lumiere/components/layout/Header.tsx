@@ -1,9 +1,20 @@
-export function Header(){
-    return(
-        <header>
-            <nav>
-                <h1>Lumière</h1>
-            </nav>
-        </header>
-    );
+import Link from "next/link";
+import { siteNavigation } from "@/lib/navigation";
+
+export function Header() {
+  return (
+    <header>
+      <nav>
+        <Link href="/">Grupo Lumière</Link>
+
+        <div>
+          {siteNavigation.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
 }
