@@ -1,17 +1,16 @@
 import Link from "next/link";
+import { adminNavigation } from "@/lib/navigation";
 
-export function AdminSidebar() {
+export default function AdminSidebar() {
   return (
-    <aside>
+    <aside className="w-64 bg-gray-100 p-4">  
       <h2>Lumière Admin</h2>
-
       <nav>
-        <Link href="/admin">Início</Link>
-        <Link href="/admin/projetos">Projetos</Link>
-        <Link href="/admin/noticias">Notícias</Link>
-        <Link href="/admin/publicacoes">Publicações</Link>
-        <Link href="/admin/equipe">Equipe</Link>
-        <Link href="/admin/galeria">Galeria</Link>
+        {adminNavigation.map((item) => (
+          <Link key={item.href} href={item.href}>
+            {item.label}
+          </Link>
+        ))}
       </nav>
     </aside>
   );
