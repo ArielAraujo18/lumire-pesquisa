@@ -1,17 +1,9 @@
-type ProjectPageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+import { TeamHero } from "@/components/sections/team/TeamHero";
 
-export default async function ProjectPage({
-  params,
-}: ProjectPageProps) {
-  const { slug } = await params;
-
+export default function TeamPage() {
   return (
     <main>
-      <h1>Projeto: {slug}</h1>
+      <TeamHero />
     </main>
   );
-}
+} 

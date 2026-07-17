@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { WhatWeDo } from "@/components/sections/WhatWeDo";
-import { StatsSection } from "@/components/sections/StatsSection";
-import { WhyLumiere } from "@/components/sections/WhyLumiere";
-import { LatestNews } from "@/components/sections/LatestNews";
-import { ContactCTA } from "@/components/sections/ContactCTA";
+import { WhatWeDo } from "@/components/sections/home/WhatWeDo";
+import { StatsSection } from "@/components/sections/home/StatsSection";
+import { WhyLumiere } from "@/components/sections/home/WhyLumiere";
+import { LatestNews } from "@/components/sections/home/LatestNews";
+import { ContactCTA } from "@/components/sections/home/ContactCTA";
 
 export default function HomePage() {
   return (
